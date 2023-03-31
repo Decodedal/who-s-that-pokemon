@@ -91,8 +91,8 @@ function App() {
           null
         }
       </div>
-      <p>Score: {score}</p>
       <button className={reveal ? "start" : "start-hide"} onClick={() => addPokemon()}>New Pokémon</button>
+      <p>Score: {score}</p>
     </div>
   );
 }

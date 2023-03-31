@@ -41,15 +41,28 @@
 
 .pic{
   filter: brightness(0%);
-  width: 90%;
+
 }
 
 .pic-reveal{
   filter:brightness(100%);
-  width: 90%;
+
 }
 
 h1{
   color: white;
   text-shadow: 1px 1px 2px black;
+}
+
+@media only screen and (max-width: 600px)  {
+  .pic{
+    filter: brightness(0%);
+    width: 90%;
+  }
+  
+  .pic-reveal{
+    filter:brightness(100%);
+    width: 90%;
+  }
+
 }
