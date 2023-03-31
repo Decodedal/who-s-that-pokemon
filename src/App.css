@@ -27,3 +27,11 @@
   font-weight: bold;
 
 }
+
+.pic{
+  filter: brightness(0%);
+}
+
+.pic-reveal{
+  filter:brightness(100%)
+}

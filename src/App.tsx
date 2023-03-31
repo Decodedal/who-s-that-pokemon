@@ -24,6 +24,8 @@ function App() {
   const [pokemon, setPokemon] = useState<PokeData>({name:"sdfdsf", url:ball});
   const [image, setImage] = useState<string>(ball);
   const [score, setScore] = useState<number>(0);
+  const [heading, setHeading] = useState<string>("Who's That Pokémon")
+  const [reveal, setReveal] = useState<Boolean>(true)
 
   useEffect(()=>{
     
@@ -41,7 +43,7 @@ function App() {
           name: name,
           url : url
         })
-      
+        console.log(data)
       }
 
       fetchData()
@@ -58,10 +60,14 @@ function App() {
   setPokemon(choice)
   // console.log(pokemonData[index])
   setImage(pokemon.url)
+  setReveal(false)
+  setHeading("Who's That Pokémon")
 
  }
 
  const checkAnswer = (answer:PokeData) =>{
+    setHeading(`It's ${pokemon.name}`)
+    setReveal(true)
     if(answer.name === pokemon.name){
       setScore(prev => prev + 1)
     }else{
@@ -71,9 +77,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Who's that pokemon</h1>
+      <h1>{heading}</h1>
       <button className='start' onClick={() => addPokemon()}>Start the game</button>
-      <img className='pic' src={pokemon.url}/>
+      <img className={reveal ? 'pic-reveal' : 'pic'} src={pokemon.url}/>
       <div className='button-container'>
         {
           pokemonData ?
