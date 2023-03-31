@@ -78,8 +78,7 @@ function App() {
   return (
     <div className="App">
       <h1>{heading}</h1>
-      <button className='start' onClick={() => addPokemon()}>New Pokémon</button>
-      <img className={reveal ? 'pic-reveal' : 'pic'} src={pokemon.url}/>
+      <img className={reveal ? 'pic-reveal' : 'pic'} src={pokemon.url} alt='hidden Pokemon'/>
       <div className='button-container'>
         {
           pokemonData ?
@@ -93,6 +92,7 @@ function App() {
         }
       </div>
       <p>Score: {score}</p>
+      <button className={reveal ? "start" : "start-hide"} onClick={() => addPokemon()}>New Pokémon</button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: aqua;
+  background: rgb(253,187,29);
+  background: linear-gradient(90deg, rgba(253,187,29,1) 24%, rgba(233,119,62,1) 45%, rgba(186,4,4,1) 93%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,15 @@
 
 .start{
   width:16em;
+  display: block;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.start-hide{
+  display: none;
 }
 
 .button-container{
@@ -18,6 +28,7 @@
   display: flex;
   justify-content: space-around;
   height: 2em;
+  gap: 1em;
 }
 
 .name-button{
@@ -30,8 +41,15 @@
 
 .pic{
   filter: brightness(0%);
+  width: 90%;
 }
 
 .pic-reveal{
-  filter:brightness(100%)
+  filter:brightness(100%);
+  width: 90%;
+}
+
+h1{
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
