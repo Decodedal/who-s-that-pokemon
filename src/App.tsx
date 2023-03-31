@@ -78,7 +78,7 @@ function App() {
   return (
     <div className="App">
       <h1>{heading}</h1>
-      <button className='start' onClick={() => addPokemon()}>Start the game</button>
+      <button className='start' onClick={() => addPokemon()}>New Pokémon</button>
       <img className={reveal ? 'pic-reveal' : 'pic'} src={pokemon.url}/>
       <div className='button-container'>
         {
